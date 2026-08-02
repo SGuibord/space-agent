@@ -355,7 +355,7 @@ function parseProjectModuleDirectoryPath(projectPath) {
 }
 
 function parseProjectModuleFilePath(projectPath) {
-  let match = String(projectPath || "").match(/^\/app\/L0\/([^/]+)\/(mod\/.+)$/u);
+  let match = String(projectPath || "").match(/^(?:\/app\/)?L0\/([^/]+)\/(mod\/.+)$/u);
 
   if (match) {
     const ownerId = normalizeEntityId(match[1]);
@@ -373,7 +373,7 @@ function parseProjectModuleFilePath(projectPath) {
     };
   }
 
-  match = String(projectPath || "").match(/^\/app\/L1\/([^/]+)\/(mod\/.+)$/u);
+  match = String(projectPath || "").match(/^(?:\/app\/)?L1\/([^/]+)\/(mod\/.+)$/u);
 
   if (match) {
     const ownerId = normalizeEntityId(match[1]);
@@ -391,7 +391,7 @@ function parseProjectModuleFilePath(projectPath) {
     };
   }
 
-  match = String(projectPath || "").match(/^\/app\/L2\/([^/]+)\/(mod\/.+)$/u);
+  match = String(projectPath || "").match(/^(?:\/app\/)?L2\/([^/]+)\/(mod\/.+)$/u);
 
   if (match) {
     const ownerId = normalizeEntityId(match[1]);
